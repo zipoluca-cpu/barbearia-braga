@@ -1,0 +1,309 @@
+/* BARBEARIA BRAGA — identidade preta e dourada */
+:root {
+    --preto: #080808;
+    --preto-2: #101010;
+    --card: #151515;
+    --ouro: #d4af37;
+    --ouro-claro: #f6dfa0;
+    --ouro-escuro: #8f6b16;
+    --branco: #fff;
+    --cinza: #c4c4c4;
+    --borda: rgba(212, 175, 55, .28);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+a { color: inherit; }
+button { font: inherit; }
+::selection { background: var(--ouro); color: var(--preto); }
+
+/* Cabeçalho */
+.cabecalho {
+    min-height: 78px;
+    padding: 14px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 5, 5, .97);
+    border-bottom: 1px solid var(--borda);
+    backdrop-filter: blur(12px);
+}
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ouro-claro);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+.logo strong { color: var(--ouro); }
+.logo-simbolo { color: var(--ouro); font-size: 30px; }
+.menu { display: flex; align-items: center; gap: 26px; }
+.menu a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #eee;
+    transition: color .2s ease;
+}
+.menu a:hover, .menu a:focus-visible { color: var(--ouro); }
+.menu-btn {
+    display: none;
+    background: none;
+    color: var(--ouro);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    padding: 5px 11px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Capa: a imagem enviada aparece à direita */
+.hero {
+    min-height: 690px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 90px 7%;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #050505;
+    background-image: url("barbearia-braga.jpeg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg,
+        #050505 0%,
+        rgba(5,5,5,.98) 28%,
+        rgba(5,5,5,.88) 44%,
+        rgba(5,5,5,.35) 67%,
+        rgba(5,5,5,.04) 100%);
+}
+.hero-conteudo { width: min(560px, 55%); }
+.eyebrow {
+    color: var(--ouro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.hero h1 {
+    margin: 22px 0 18px;
+    font: 700 clamp(43px, 6vw, 76px)/1.06 Georgia, 'Times New Roman', serif;
+    letter-spacing: -.8px;
+}
+.hero h1 span, .secao h2 span { color: var(--ouro); }
+.hero-texto { max-width: 430px; color: #dedede; font-size: 17px; margin-bottom: 30px; }
+.hero-acoes, .agendamento-acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-detalhe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    color: #d3d3d3;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.hero-detalhe span { display: inline-block; width: 27px; height: 1px; background: var(--ouro); }
+.hero-selo {
+    display: none;
+}
+
+/* Botões */
+.botao {
+    min-height: 47px;
+    padding: 13px 20px;
+    border-radius: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+}
+.botao:hover { transform: translateY(-2px); }
+.botao-ouro {
+    color: #090909;
+    border: 1px solid var(--ouro);
+    background: linear-gradient(135deg, var(--ouro-claro), var(--ouro) 65%, #b88717);
+    box-shadow: 0 5px 18px rgba(212,175,55,.10);
+}
+.botao-ouro:hover { box-shadow: 0 8px 25px rgba(212,175,55,.24); }
+.botao-contorno { color: var(--ouro-claro); border: 1px solid var(--ouro); background: rgba(0,0,0,.45); }
+.botao-contorno:hover { background: rgba(212,175,55,.1); }
+
+/* Seções gerais */
+.secao { padding: 100px 8%; }
+.secao h2 {
+    margin: 13px 0 20px;
+    font: 700 clamp(32px, 4vw, 49px)/1.15 Georgia, 'Times New Roman', serif;
+}
+.sobre {
+    display: grid;
+    grid-template-columns: .75fr 1.5fr;
+    align-items: center;
+    gap: 70px;
+    background: radial-gradient(ellipse at 15% 50%, rgba(212,175,55,.08), transparent 50%), #101010;
+    border-block: 1px solid var(--borda);
+}
+.sobre-marca {
+    min-height: 230px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    border: 1px solid var(--borda);
+    outline: 1px solid rgba(212,175,55,.09);
+    outline-offset: 7px;
+    color: var(--ouro);
+    font: 25px/1.25 Georgia, 'Times New Roman', serif;
+}
+.sobre-marca span { font-size: 48px; }
+.sobre-marca strong { font-size: 38px; }
+.sobre-texto > p:not(.eyebrow) { max-width: 760px; color: var(--cinza); margin-top: 14px; }
+
+/* Serviços */
+.servicos { text-align: center; }
+.cabecalho-secao { max-width: 670px; margin: 0 auto 43px; }
+.cabecalho-secao > p:last-child { color: var(--cinza); }
+.servicos-grid { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.servico-card {
+    padding: 32px 24px;
+    text-align: left;
+    background: linear-gradient(145deg, #191919, #0c0c0c);
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.servico-card:hover { transform: translateY(-5px); border-color: var(--ouro); box-shadow: 0 15px 35px rgba(0,0,0,.25); }
+.servico-icone { color: var(--ouro); font-size: 37px; margin-bottom: 18px; }
+.servico-numero { color: var(--ouro); font-size: 10px; letter-spacing: 2px; margin-bottom: 10px; }
+.servico-card h3 { font: 700 25px Georgia, 'Times New Roman', serif; margin-bottom: 13px; }
+.servico-card > p:not(.servico-numero) { color: var(--cinza); font-size: 14px; min-height: 90px; margin-bottom: 24px; }
+.servico-card .botao { width: 100%; }
+
+/* Horários */
+.horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #080808);
+    border-block: 1px solid var(--borda);
+}
+.horarios-texto > p:last-child { color: var(--cinza); max-width: 430px; }
+.horarios-card { padding: 28px; background: #111; border: 1px solid var(--borda); }
+.horario-linha { display: flex; justify-content: space-between; gap: 15px; padding: 17px 0; border-bottom: 1px solid #302819; }
+.horario-linha span { color: #ddd; }
+.horario-linha strong { color: var(--ouro-claro); text-align: right; }
+.nota-horario { color: #999; font-size: 12px; margin-top: 18px; }
+
+/* Agendamento */
+.agendamento {
+    text-align: center;
+    background: radial-gradient(ellipse at center, rgba(212,175,55,.10), transparent 68%);
+}
+.agendamento > p:not(.eyebrow) { max-width: 580px; color: var(--cinza); margin: 0 auto 26px; }
+.agendamento-acoes { justify-content: center; }
+
+/* Contato */
+.contato { text-align: center; background: #101010; border-top: 1px solid var(--borda); }
+.contato-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 38px; }
+.contato-item { padding: 28px 18px; border: 1px solid var(--borda); background: #0b0b0b; }
+.contato-icone { color: var(--ouro); font-size: 31px; }
+.contato-item h3 { margin: 12px 0; font: 700 21px Georgia, 'Times New Roman', serif; }
+.contato-item p { min-height: 78px; color: var(--cinza); font-size: 13px; overflow-wrap: anywhere; }
+.link-ouro { display: inline-block; margin-top: 13px; color: var(--ouro); font-size: 12px; text-decoration: none; }
+.link-ouro:hover { text-decoration: underline; }
+
+/* Rodapé */
+.rodape { padding: 36px 7%; text-align: center; background: #050505; border-top: 1px solid var(--borda); }
+.logo-rodape { margin-bottom: 9px; }
+.rodape > p { color: #c7c7c7; margin-bottom: 14px; }
+.rodape small { display: block; color: #858585; font-size: 11px; margin-top: 7px; }
+.rodape .credito { color: var(--ouro-escuro); }
+
+/* Responsividade */
+@media (max-width: 950px) {
+    .cabecalho { padding-inline: 5%; }
+    .menu { gap: 15px; }
+    .menu a { font-size: 12px; }
+    .hero { background-position: right center; }
+    .hero-conteudo { width: 60%; }
+    .secao { padding: 80px 6%; }
+    .servicos-grid { gap: 14px; }
+    .servico-card { padding: 26px 18px; }
+    .sobre { gap: 38px; }
+}
+@media (max-width: 700px) {
+    .cabecalho { min-height: 70px; }
+    .logo { font-size: 14px; }
+    .logo-simbolo { font-size: 26px; }
+    .menu-btn { display: block; }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 22px;
+        flex-direction: column;
+        gap: 18px;
+        background: rgba(5,5,5,.99);
+        border-bottom: 1px solid var(--ouro);
+    }
+    .menu.aberto { display: flex; }
+    .menu a { font-size: 14px; }
+    .hero {
+        min-height: 790px;
+        align-items: flex-start;
+        padding: 75px 7% 330px;
+        background-size: auto 390px;
+        background-position: center bottom;
+    }
+    .hero-overlay {
+        background: linear-gradient(180deg,
+            #050505 0%,
+            rgba(5,5,5,.97) 35%,
+            rgba(5,5,5,.77) 53%,
+            rgba(5,5,5,.08) 100%);
+    }
+    .hero-conteudo { width: 100%; }
+    .hero h1 { font-size: clamp(42px, 11vw, 58px); }
+    .hero-texto { font-size: 15px; }
+    .hero-acoes { align-items: stretch; flex-direction: column; max-width: 280px; }
+    .hero-detalhe { margin-top: 23px; }
+    .secao { padding: 72px 7%; }
+    .sobre { grid-template-columns: 1fr; gap: 35px; }
+    .sobre-marca { min-height: 170px; max-width: 310px; width: 100%; margin: auto; }
+    .servicos-grid, .contato-grid, .horarios { grid-template-columns: 1fr; }
+    .servico-card > p:not(.servico-numero) { min-height: auto; }
+    .horarios { gap: 25px; }
+    .horario-linha { font-size: 13px; }
+    .contato-item p { min-height: auto; }
+    .agendamento-acoes { flex-direction: column; max-width: 320px; margin: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}

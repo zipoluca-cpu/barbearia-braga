@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <meta name="description" content="Barbearia Braga — barbearia e tranças em Santíssimo, Rio de Janeiro. Agende seu horário pelo WhatsApp.">
+    <title>Barbearia Braga | Barbearia & Tranças</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#inicio" aria-label="Barbearia Braga - início">
+            <span class="logo-simbolo">♛</span>
+            <span>BARBEARIA <strong>BRAGA</strong></span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            ☰
+        </button>
+
+        <nav id="menu" class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#horarios">Horários</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
+            <div class="hero-conteudo">
+                <p class="eyebrow">BARBEARIA • TRANÇAS • ESTILO</p>
+                <h1>Beleza, estilo<br>e <span>respeito.</span></h1>
+                <p class="hero-texto">Seu visual merece cuidado, personalidade e um atendimento especial.</p>
+                <div class="hero-acoes">
+                    <a class="botao botao-ouro" href="#agendamento">Agendar horário</a>
+                    <a class="botao botao-contorno" href="#servicos">Conheça os serviços</a>
+                </div>
+                <div class="hero-detalhe"><span></span> Santíssimo — Rio de Janeiro</div>
+            </div>
+            <div class="hero-selo" aria-hidden="true">
+                <span class="selo-coroa">♛</span>
+                <span>BARBEARIA</span>
+                <strong>BRAGA</strong>
+                <small>ESTILO • CUIDADO • PERSONALIDADE</small>
+            </div>
+        </section>
+
+        <section class="sobre secao" id="sobre">
+            <div class="sobre-marca"><span>♛</span><p>BARBEARIA<br><strong>BRAGA</strong></p></div>
+            <div class="sobre-texto">
+                <p class="eyebrow">QUEM SOMOS</p>
+                <h2>Seu estilo é sua <span>identidade.</span></h2>
+                <p>A Barbearia Braga reúne cuidado, estilo e atenção aos detalhes. Com Cristhiano na barbearia e Eliete nas tranças, a proposta é oferecer um atendimento acolhedor para você valorizar seu visual.</p>
+                <p>Entre em contato para confirmar o serviço desejado, valores e disponibilidade de horários.</p>
+            </div>
+        </section>
+
+        <section class="servicos secao" id="servicos">
+            <div class="cabecalho-secao">
+                <p class="eyebrow">CUIDADO EM CADA DETALHE</p>
+                <h2>Nossos <span>serviços</span></h2>
+                <p>Escolha o atendimento e fale diretamente com o profissional.</p>
+            </div>
+
+            <div class="servicos-grid">
+                <article class="servico-card">
+                    <div class="servico-icone">✂</div>
+                    <p class="servico-numero">01 / BARBEARIA</p>
+                    <h3>Corte e barba</h3>
+                    <p>Cuidados com o visual masculino e acabamento de acordo com o seu estilo.</p>
+                    <button class="botao botao-ouro" data-agendar="barbearia">Agendar com Cristhiano</button>
+                </article>
+
+                <article class="servico-card">
+                    <div class="servico-icone">♛</div>
+                    <p class="servico-numero">02 / TRANÇAS</p>
+                    <h3>Tranças</h3>
+                    <p>Entre em contato para conversar sobre o estilo de trança desejado e consultar horários.</p>
+                    <button class="botao botao-ouro" data-agendar="trancista">Agendar com Eliete</button>
+                </article>
+
+                <article class="servico-card">
+                    <div class="servico-icone">✧</div>
+                    <p class="servico-numero">03 / ATENDIMENTO</p>
+                    <h3>Seu próximo visual</h3>
+                    <p>Consulte os serviços disponíveis, os valores e a agenda antes de marcar.</p>
+                    <button class="botao botao-contorno" data-agendar="barbearia">Consultar disponibilidade</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="horarios secao" id="horarios">
+            <div class="horarios-texto">
+                <p class="eyebrow">PLANEJE SUA VISITA</p>
+                <h2>Estamos esperando <span>por você.</span></h2>
+                <p>Confira nosso horário de atendimento e agende pelo WhatsApp.</p>
+            </div>
+            <div class="horarios-card">
+                <div class="horario-linha"><span>Segunda a sábado</span><strong>08h às 20h</strong></div>
+                <div class="horario-linha"><span>Domingo</span><strong>Fechado</strong></div>
+                <p class="nota-horario">A disponibilidade pode variar conforme o profissional e o serviço.</p>
+            </div>
+        </section>
+
+        <section class="agendamento secao" id="agendamento">
+            <p class="eyebrow">SEU HORÁRIO COMEÇA AQUI</p>
+            <h2>Vamos cuidar do seu <span>visual?</span></h2>
+            <p>Escolha com quem deseja falar e continue o agendamento pelo WhatsApp.</p>
+            <div class="agendamento-acoes">
+                <button class="botao botao-ouro" data-agendar="barbearia">WhatsApp da barbearia</button>
+                <button class="botao botao-contorno" data-agendar="trancista">WhatsApp da trancista</button>
+            </div>
+        </section>
+
+        <section class="contato secao" id="contato">
+            <p class="eyebrow">FALE CONOSCO</p>
+            <h2>Visite a <span>Barbearia Braga</span></h2>
+            <div class="contato-grid">
+                <div class="contato-item">
+                    <span class="contato-icone">⌖</span>
+                    <h3>Endereço</h3>
+                    <p>Rua Dezoito de Fevereiro, 107<br>Santíssimo, Rio de Janeiro — RJ<br>CEP 23010-140</p>
+                    <a class="link-ouro" href="https://www.google.com/maps/search/?api=1&query=Rua+Dezoito+de+Fevereiro+107+Santissimo+Rio+de+Janeiro" target="_blank" rel="noopener">Ver no mapa ↗</a>
+                </div>
+                <div class="contato-item">
+                    <span class="contato-icone">☎</span>
+                    <h3>Barbearia</h3>
+                    <p>(21) 96759-8688</p>
+                    <a class="link-ouro" href="https://wa.me/5521967598688" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a>
+                </div>
+                <div class="contato-item">
+                    <span class="contato-icone">✧</span>
+                    <h3>Trancista — Eliete</h3>
+                    <p>(21) 98292-9634</p>
+                    <a class="link-ouro" href="https://wa.me/5521982929634" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a class="logo logo-rodape" href="#inicio"><span class="logo-simbolo">♛</span><span>BARBEARIA <strong>BRAGA</strong></span></a>
+        <p>Beleza, estilo e respeito.</p>
+        <small>© <span id="ano"></span> Barbearia Braga. Todos os direitos reservados.</small>
+        <small class="credito">Site demonstrativo desenvolvido por Lucas Rizo Lemes.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
